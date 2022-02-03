@@ -82,7 +82,7 @@ li a {
   border-radius: 20px;
 }
 a.contact {
-  color: rgb(102, 185, 230);
+  color: var(--bluephototext);
   background-color: var(--white);
   text-transform: uppercase;
 }
