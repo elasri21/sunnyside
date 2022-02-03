@@ -1,0 +1,451 @@
+/**/
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Barlow:wght@600&family=Commissioner:wght@400;500;700&family=Josefin+Sans:wght@300&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Barlow:wght@600&family=Commissioner:wght@400;500;700&family=Fraunces:ital,wght@0,900;1,700&family=Josefin+Sans:wght@300&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*variables*/
+:root {
+  --sotred: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --cyangraphictext: hsl(167, 40%, 24%);
+  --bluephototext: hsl(198, 62%, 26%);
+  --cyanfooter: hsl(168, 34%, 41%);
+
+  --vddeblue: hsl(212, 27%, 19%);
+  --vdgrblue: hsl(213, 9%, 39%);
+  --dgrblue: hsl(232, 10%, 55%);
+  --grblue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --bodysize: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+img {
+  height: 100%;
+}
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+}
+a {
+  transition: 0.5s ease;
+}
+/* section img {
+  width: 100%;
+} */
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+header {
+  position: relative;
+  background-image: url("images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 30px 20px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.hamburger,
+.close {
+  display: none;
+}
+.hamburger i,
+.close i {
+  color: var(--white);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+}
+li {
+  margin-right: 15px;
+}
+li a {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  /* border: 1px solid black; */
+  padding: 7px 10px;
+  border-radius: 20px;
+}
+a.contact {
+  color: rgb(102, 185, 230);
+  background-color: var(--white);
+  text-transform: uppercase;
+}
+li a:hover {
+  background-color: rgb(102, 185, 230);
+  color: var(--white);
+}
+.main-title {
+  margin-top: 30px;
+  text-align: center;
+}
+h1 {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+.down-er {
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 620px) {
+  header {
+    position: relative;
+    background-image: url("images/mobile/image-header.jpg");
+  }
+  nav {
+    width: 93%;
+    display: none;
+    position: absolute;
+    top: 82px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    padding: 20px;
+    text-align: center;
+    border-radius: 2px;
+  }
+  nav::before {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -18px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    /* transform: rotate(45deg); */
+  }
+  nav::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 6px;
+    top: -32px;
+    width: 22px;
+    height: 29px;
+    background-image: url("images/desktop/image-header.jpg");
+    transform: rotate(45deg);
+  }
+  ul {
+    display: block;
+  }
+  ul li {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  li a {
+    color: var(--grblue);
+  }
+  .hamburger {
+    display: block;
+  }
+  a.contact {
+    background-color: var(--yellow);
+    color: var(--vddeblue);
+  }
+}
+/*end of the header*/
+.egg,
+.cup {
+  display: flex;
+}
+.cup img,
+.egg img {
+  height: 100%;
+  width: 100%;
+}
+.egg > div,
+.cup > div {
+  width: 100%;
+}
+.parent {
+  position: relative;
+}
+.disc {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+}
+@media screen and (max-width: 586px) {
+  .cup {
+    display: block;
+  }
+  .egg {
+    flex-wrap: wrap;
+  }
+  .egg > div {
+    width: 100%;
+  }
+  .egg .image {
+    order: 1;
+  }
+  .egg .parent {
+    order: 2;
+  }
+  .egg *,
+  .cup * {
+    position: unset;
+    left: unset;
+    top: unset;
+    transform: unset;
+    text-align: center;
+  }
+}
+.disc h2 {
+  font-weight: 700;
+  color: var(--vddeblue);
+  margin-bottom: 15px;
+}
+.disc p {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--grblue);
+  margin-bottom: 15px;
+  word-spacing: 2px;
+}
+.link a {
+  position: relative;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--vddeblue);
+  font-weight: 700;
+}
+.link a::after {
+  display: block;
+  content: "";
+  width: 125px;
+  height: 5px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  z-index: -1111;
+}
+.egg-link::after {
+  background-color: var(--yellow);
+}
+.cup-link::after {
+  background-color: var(--sotred);
+}
+/*start of design section*/
+.design {
+  display: flex;
+}
+.design > div {
+  width: 50%;
+  text-align: center;
+  padding: 30px;
+}
+.design h2 {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 200px;
+  margin-bottom: 15px;
+}
+.graphic h2,
+.graphic p {
+  color: var(--cyangraphictext);
+}
+.design p {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.graphic {
+  background-image: url("images/desktop/image-graphic-design.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.photograph {
+  background-image: url("images/desktop/image-photography.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.photograph h2,
+.photograph p {
+  color: var(--bluephototext);
+}
+
+@media screen and (max-width: 576px) {
+  .design {
+    display: block;
+    width: 100%;
+  }
+  .design > div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .graphic {
+    background-image: url("images/mobile/image-graphic-design.jpg");
+  }
+  .photograph {
+    background-image: url("images/mobile/image-photography.jpg");
+  }
+}
+
+/*clients sectio*/
+.clients {
+  padding-top: 30px;
+  text-align: center;
+  background-color: hsl(7, 99%, 96%);
+}
+.clients h2 {
+  font-size: 1.2em;
+  color: var(--grblue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.client-container {
+  display: flex;
+  justify-content: space-around;
+}
+.client-container img {
+  border-radius: 50%;
+}
+.client p {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--vdgrblue);
+  margin-bottom: 30px;
+}
+h3 {
+  color: var(--vddeblue);
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 400px) {
+  .client-container {
+    display: block;
+  }
+  .client {
+    padding-bottom: 30px;
+  }
+  .client p {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+/*gallery*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+.mobile {
+  display: none;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+}
+.milk {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.orange {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.cone {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.sugar {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+
+@media screen and (max-width: 560px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .milk {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .orange {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .cone {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .sugar {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+@media screen and (max-width: 400px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
+/*footer*/
+footer {
+  background-color: var(--cyanfooter);
+  color: var(--cyangraphictext);
+  text-align: center;
+  padding: 30px;
+}
+.brand-name {
+  margin-bottom: 15px;
+}
+
+.brand-name p {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+footer a {
+  color: var(--cyangraphictext);
+  margin-right: 15px;
+}
+.social {
+  margin-top: 20px;
+}
+.social i {
+  font-size: 1.5em;
+}
+footer a:hover {
+  color: var(--white);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
