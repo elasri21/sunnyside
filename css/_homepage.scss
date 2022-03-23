@@ -1,0 +1,295 @@
+/*start of egg and cup sections*/
+.egg,
+.cup {
+  display: flex;
+  > div {
+    width: 50%;
+  }
+  .image {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .parent {
+    position: relative;
+    .disc {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      h2 {
+        font-weight: 700;
+        color: $vddeblue;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 0.8em;
+        font-weight: 400;
+        color: $grblue;
+        margin-bottom: 15px;
+        word-spacing: 2px;
+      }
+      .link {
+        a {
+          position: relative;
+          font-family: "Fraunces", serif;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: $vddeblue;
+          font-weight: 700;
+          &::after {
+            display: block;
+            content: "";
+            width: 125px;
+            height: 5px;
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            z-index: -1111;
+          }
+          &.egg-link {
+            &::after {
+              background-color: $yellow;
+            }
+          }
+          &.cup-link {
+            &::after {
+              background-color: $softRed;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile) {
+    * {
+      position: unset !important;
+      left: unset !important;
+      top: unset !important;
+      transform: unset !important;
+      text-align: center !important;
+    }
+  }
+}
+.egg {
+  @include breakpoint(mobile) {
+    flex-wrap: wrap;
+    > div {
+      width: 100%;
+    }
+    .image {
+      order: 1;
+    }
+    .parent {
+      order: 2;
+    }
+  }
+}
+
+.cup {
+  @include breakpoint(mobile) {
+    display: block;
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+/*end of egg and cup sections*/
+
+/*start of design section*/
+.design {
+  display: flex;
+  @include breakpoint(mobile) {
+    display: block;
+    width: 100%;
+    > div {
+      width: 100% !important;
+    }
+    .graphic {
+      background-image: url("../images/mobile/image-graphic-design.jpg");
+    }
+    .photograph {
+      background-image: url("../images/mobile/image-photography.jpg");
+    }
+  }
+  > div {
+    width: 50%;
+    text-align: center;
+    padding: 30px;
+  }
+  .graphic {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    h2 {
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-top: 200px;
+      margin-bottom: 15px;
+      color: $cyangraphictext;
+    }
+    p {
+      font-size: 0.8em;
+      font-weight: 600;
+      color: $cyangraphictext;
+    }
+  }
+  .photograph {
+    background-image: url("../images/desktop/image-photography.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    h2 {
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-top: 200px;
+      margin-bottom: 15px;
+      color: $bluephototext;
+    }
+    p {
+      font-size: 0.8em;
+      font-weight: 600;
+      color: $bluephototext;
+    }
+  }
+}
+/*end of design section*/
+
+/*start of client section*/
+.clients {
+  padding-top: 30px;
+  text-align: center;
+  background-color: hsl(7, 99%, 96%);
+  h2 {
+    font-size: 1.2em;
+    color: $grblue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .client-container {
+    display: flex;
+    justify-content: space-around;
+    @include breakpoint(mobile) {
+      display: block;
+      .client {
+        padding-bottom: 30px;
+        p {
+          width: 100%;
+          margin-top: 15px;
+        }
+      }
+    }
+    .client {
+      .profile {
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+    p {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.8em;
+      font-weight: 400;
+      color: $vdgrblue;
+      margin-bottom: 30px;
+    }
+    h3 {
+      color: $vddeblue;
+      margin-bottom: 10px;
+    }
+  }
+}
+/*end of client section*/
+
+/*start of gallery section*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  div {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &.mobile {
+    display: none;
+  }
+  @include breakpoint(large) {
+    .milk {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .orange {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    .cone {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+    .sugar {
+      grid-column: 4/5;
+      grid-row: 1/2;
+    }
+  }
+  @include breakpoint(medium) {
+    .milk {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .orange {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    .cone {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+    .sugar {
+      grid-column: 4/5;
+      grid-row: 1/2;
+    }
+  }
+  @include breakpoint(small) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .milk {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .orange {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    .cone {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    .sugar {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+  }
+  @include breakpoint(mobile) {
+    display: block;
+    div {
+      width: 100%;
+    }
+    &.desktop {
+      display: none;
+    }
+    &.mobile {
+      display: block;
+    }
+  }
+}
+/*end of gallery section*/

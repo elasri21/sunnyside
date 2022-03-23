@@ -1,0 +1,114 @@
+header {
+  position: relative;
+  background-image: url("../images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 30px 20px;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    nav {
+      ul {
+        display: flex !important;
+        li:not(:last-of-type) {
+          margin-right: 15px;
+        }
+        li {
+          a {
+            color: $white;
+            font-weight: 400;
+            font-size: 1.1em;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            padding: 7px 10px;
+            border-radius: 20px;
+            &.contact {
+              color: $bluephototext;
+              background-color: $white;
+              text-transform: uppercase;
+            }
+            &:hover {
+              background-color: rgb(102, 185, 230);
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .hamburger,
+    .close {
+      display: none;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+  .main-title {
+    margin-top: 30px;
+    text-align: center;
+    h1 {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: $white;
+      margin-bottom: 40px;
+    }
+    .down-er {
+      margin-bottom: 100px;
+    }
+  }
+  @include breakpoint(mobile) {
+    background-image: url("../images/mobile/image-header.jpg");
+    .top {
+      nav {
+        width: 93%;
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 2px;
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          right: 0;
+          top: -18px;
+          width: 20px;
+          height: 20px;
+          background-color: $white;
+        }
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          right: 6px;
+          top: -32px;
+          width: 22px;
+          height: 29px;
+          background-image: url("../images/desktop/image-header.jpg");
+          transform: rotate(45deg);
+        }
+        ul {
+          display: block !important;
+          li {
+            margin-bottom: 20px;
+            margin-right: 0;
+            a {
+              color: $grblue;
+              &.contact {
+                background-color: $yellow;
+                color: $vddeblue;
+              }
+            }
+          }
+        }
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  }
+}

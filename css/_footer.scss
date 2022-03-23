@@ -1,0 +1,40 @@
+/*start footer*/
+footer {
+  background-color: $cyanfooter;
+  color: $cyangraphictext;
+  text-align: center;
+  padding: 30px;
+  .brand-name {
+    margin-bottom: 15px;
+    p {
+      font-size: 1.3em;
+      font-weight: 700;
+    }
+  }
+  .social {
+    margin-top: 20px;
+    a {
+      i {
+        font-size: 1.5em;
+      }
+    }
+  }
+  .links,
+  .social {
+    a {
+      color: $cyangraphictext;
+      margin-right: 15px;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+/*end footer*/
